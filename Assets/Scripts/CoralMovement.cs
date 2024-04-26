@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoralMovement : MonoBehaviour
+public class BackgroundMovement : MonoBehaviour
 {
     [SerializeField] GameObject coral;
+    [SerializeField] float speed;
+    private MeshRenderer _renderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       _renderer = GetComponent<MeshRenderer>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //coral.transform.position = coral.transform.position.x + transform. ;
+        _renderer.material.mainTextureOffset = new Vector2(Time.time * speed, 0f);
     }
 }
