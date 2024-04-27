@@ -517,7 +517,8 @@ MonoBehaviour:
   gameOverUI: {fileID: 0}
   scoreText: {fileID: 546794147}
   score: {fileID: 11400000, guid: 5b6660e2d7b9a8645bb12558ed4412dc, type: 2}
-  scoreMult: 1
+  speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
+  scoreMult: {fileID: 11400000, guid: fda3339bf98dde3498dec20815d2b2bc, type: 2}
 --- !u!114 &262436231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,6 +1197,7 @@ MonoBehaviour:
   _img: {fileID: 647452904}
   _x: 0.1
   _y: 0
+  x: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
 --- !u!1 &713266638
 GameObject:
   m_ObjectHideFlags: 0

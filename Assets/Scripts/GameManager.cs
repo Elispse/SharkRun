@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text scoreText;
 
     [SerializeField] FloatVariable score;
-    [SerializeField] float scoreMult;
+    [SerializeField] FloatVariable speed;
+    [SerializeField] FloatVariable scoreMult;
 
     private State state = State.PLAY_GAME;
 
@@ -27,7 +28,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        speed.value = speed.initialValue;
+        scoreMult.value = scoreMult.initialValue;
     }
 
     // Update is called once per frame
@@ -45,7 +47,7 @@ public class GameManager : MonoBehaviour
 
                 break;
             case State.PLAY_GAME:
-                score.value += scoreMult * Time.deltaTime;
+                score.value += scoreMult.value * Time.deltaTime;
                 scoreText.text = "Score: " + score.value.ToString("0000");
                 break;
             case State.GAME_OVER:
@@ -57,6 +59,11 @@ public class GameManager : MonoBehaviour
     public void OnScoreUp(float points)
     {
         score.value += points;
-        scoreText.text = "Score: " + score.value.ToString();
+        scoreText.text = "Score: " + score.value.ToString("0000");
+    }
+
+    public void GameOver()
+    {
+
     }
 }
