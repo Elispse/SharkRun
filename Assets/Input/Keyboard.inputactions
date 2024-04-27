@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Escape",
+                    "type": "Button",
+                    "id": "080d07cb-8d0b-46e3-b2ae-a3df0c5c7892",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -70,32 +79,15 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "New action map",
-            "id": "6eef7808-9ccd-4ded-87fb-2ad21a2d2e3d",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "40121901-0bb1-4f85-b1fb-e4b7728fc58e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "8fbb63a0-e194-4c1c-842f-c3660b0cc315",
-                    "path": "",
+                    "id": "efabc4b2-b6e5-49e3-912b-54f14c9b4bb8",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
