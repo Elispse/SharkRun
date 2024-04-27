@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5848144167300498170}
   - component: {fileID: 6802521750851325172}
   - component: {fileID: 3432352068196291289}
+  - component: {fileID: -7334457868362580741}
   m_Layer: 0
   m_Name: PinkCoral
   m_TagString: Untagged
@@ -180,3 +181,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
+--- !u!114 &-7334457868362580741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979202529788754166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6684fad111fc384dad0eb5c6f24a88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
