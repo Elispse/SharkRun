@@ -4,12 +4,15 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using System.Linq;
+using static UnityEngine.Rendering.DebugUI;
 
 public class ObstacleGenerator : MonoBehaviour
 {
     [SerializeField] int LoadSecondsMinimum = 0;
     [SerializeField] int LoadSecondsMaximum = 5;
     [SerializeField] GameObject Player;
+
+    [SerializeField] int chanceNotInArea = 2; // 1 in 10 chance.
 
     private int weightLost = 0;
     private GameObject lastAsset;
@@ -38,7 +41,8 @@ public class ObstacleGenerator : MonoBehaviour
 
     private GameObject GetObjectFromListByWeight(List<GameObject> values, int weight)
     {
-        int rnd = Random.Range(1, weight + 1);
+        int rnd = Random.Range(0, weight + 1);
+
         foreach (var item in values)
         {
             rnd -= item.GetComponent<WeightScript>().Weight;
@@ -52,6 +56,13 @@ public class ObstacleGenerator : MonoBehaviour
     private GameObject GetRandomObjectInArea(string Area)
     {
         var filtered = Obstacles.Where(item => item.GetComponent<WeightScript>().Area.ToString() == Area).ToList();
+
+        int choice = Random.Range(0, chanceNotInArea);
+        if (choice == 0)
+        {
+            filtered = Obstacles.Where(item => !filtered.Contains(item)).ToList();
+        }
+
         int filteredTotalWeight = 0;
 
         foreach (var item in filtered)

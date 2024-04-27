@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5702384855415388795}
   m_Layer: 0
   m_Name: Rocks_0
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Step: -1
+  speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
 --- !u!68 &6272816688888286600
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -189,3 +190,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6684fad111fc384dad0eb5c6f24a88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
+  scoreMult: {fileID: 11400000, guid: fda3339bf98dde3498dec20815d2b2bc, type: 2}
