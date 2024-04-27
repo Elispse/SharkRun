@@ -3,8 +3,9 @@ using System.IO;
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEditor.VersionControl;
 
-public class ObstacleGenerator : MonoBehaviour
+public class CoralGenerator : MonoBehaviour
 {
     [SerializeField] int LoadSecondsMinimum = 0;
     [SerializeField] int LoadSecondsMaximum = 5;
@@ -13,7 +14,7 @@ public class ObstacleGenerator : MonoBehaviour
     private GameObject lastAsset;
 
     private int TotalWeight = 0;
-    private string path = "Assets/Prefabs/Obstacles";
+    private string path = "Assets/Prefabs/Coral";
     private List<GameObject> Obstacles = new List<GameObject>();
 
     // Start is called before the first frame update
@@ -44,7 +45,6 @@ public class ObstacleGenerator : MonoBehaviour
         {
             rnd -= item.GetComponent<WeightScript>().Weight;
             if (rnd > 0) continue;
-
             return item;
         }
         return null;
