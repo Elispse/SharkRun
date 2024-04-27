@@ -39,10 +39,10 @@ public class ObstacleGenerator : MonoBehaviour
 
     private GameObject GetRandomObject()
     {
-        int rnd = Random.Range(1, TotalWeight);
+        int rnd = Random.Range(1, TotalWeight+1);
         foreach (var item in Obstacles)
         {
-            rnd -= item.GetComponent<WeightScript?>().Weight;
+            rnd -= item.GetComponent<WeightScript>().Weight;
             if (rnd > 0) continue;
 
             return item;
