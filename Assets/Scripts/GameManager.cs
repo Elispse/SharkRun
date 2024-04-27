@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] GameObject titleUI;
+    [SerializeField] GameObject gameOverUI;
+
     [SerializeField] FloatVariable score;
 
     // Start is called before the first frame update
