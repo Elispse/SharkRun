@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = moveSpeed * moveVector;
+        gameObject.GetComponent<SpriteRenderer>().flipX = moveVector.x < 0 ? true : false;
     }
 
     private void OnMovementPerformed(InputAction.CallbackContext value)
