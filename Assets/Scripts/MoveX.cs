@@ -9,7 +9,7 @@ public class MoveX : MonoBehaviour
     void Update()
     {
         Transform trans = gameObject.GetComponent<Transform>();
-        Vector3 newVect = trans.position + new Vector3(Step, 0f, 0f);
+        Vector3 newVect = trans.position + new Vector3(Step * Time.deltaTime, 0f, 0f);
         trans.position = newVect;
     }
 }
