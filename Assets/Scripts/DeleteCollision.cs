@@ -6,7 +6,6 @@ public class DeleteCollision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Finish")) Destroy(gameObject);
     }
 }
