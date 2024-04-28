@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
 
     private State state = State.TITLE;
     private bool pause = false;
-    string QuotePath = "Assets/Externals/Quotes.txt";
-    string HSPath = "Assets/Externals/Highscore.txt";
+    string QuotePath;
+    string HSPath;
 
     public enum State
     {
@@ -46,7 +46,12 @@ public class GameManager : MonoBehaviour
         pauseUI.active = false;
         pauseButtonUI.active = false;
         gameOverUI.active = false;
+        string QuotePath = Application.persistentDataPath + "/Quotes.txt";
+        string HSPath = Application.persistentDataPath + "/Highscore.txt";
     }
+
+        private string quotes = "“I know not all that may be coming, but be it what it will, I'll go to it laughing.”? Herman Melville, Moby-Dick or, The Whale\r\n“Better to sleep with a sober cannibal than a drunk Christian.”? Ismael,  Moby-Dick or, The Whale\r\n“As for me, I am tormented with an everlasting itch for things remote. I love to sail forbidden seas, and land on barbarous coasts.”? Herman Melville, Moby-Dick or, The Whale\r\n\"All my means are sane, my motive and my object mad.\"- Herman Melville, Moby-Dick or, The Whale\r\n\"All mortal greatness is but disease.\"- Ishmael,  Moby-Dick or, The Whale\r\n\"I try all things, I achieve what I can.\"- Ishmael, Moby-Dick or, The Whale\r\n\"Talk not to me of blasphemy, man; I’d strike the sun if it insulted me.\"- Captain Ahab, Moby-Dick or, The Whale\r\n\"Heaven have mercy on us all - Presbyterians and Pagans alike - for we are all somehow dreadfully cracked about the head, and sadly need mending.\"- Ismael, Moby-Dick or, The Whale\r\n\"Call me Ishmael.\"- Ishmael, Moby-Dick or, The Whale\r\n\"See how elastic our prejudices grow when once love comes to bend them.\"- Ishmael, Moby-Dick or, The Whale\r\n\"To produce a mighty book, you must choose a mighty theme. No great and enduring volume can ever be written on the flea, though many there be who have tried it.\"- Ishmael, Moby-Dick or, The Whale\r\n\"Book! You lie there; the fact is, you books must know your places. You’ll do to give us the bare words and facts, but we come in to supply the thoughts.\"- Stubb, Moby-Dick or, The Whale";
+        
 
     // Update is called once per frame
     void Update()
@@ -88,8 +93,9 @@ public class GameManager : MonoBehaviour
 
     private string[] GetQuotes()
     {
-        string[] quotes = File.ReadAllLines(QuotePath);
-        return quotes;
+        //string[] quotes = File.ReadAllLines(QuotePath);
+        string[] newQuotes = quotes.Split("\n");
+        return newQuotes;
     }
     private void DisplayRandomQuote()
     {
@@ -100,20 +106,27 @@ public class GameManager : MonoBehaviour
 
     private float GetHighScore()
     {
-        string highscore = File.ReadAllText(HSPath);
+        StreamReader reader = new StreamReader(HSPath);
+        string highscore = reader.ReadToEnd();
         float score = 0f;
         try
         {
             score = float.Parse(highscore);
             return score;
         } catch {}
-        
+        reader.Close();
         return score;
     }
 
     private void SetHighscore(float Highscore)
     {
-        File.WriteAllText(HSPath, Highscore.ToString());
+        StreamWriter writer = new StreamWriter(HSPath, true);
+        writer.WriteLine(Highscore.ToString());
+        writer.Close();
+        StreamReader reader = new StreamReader(HSPath);
+        //Print the text from the file
+        Debug.Log(reader.ReadToEnd());
+        reader.Close();
     }
 
     public void OnScoreUp(float points)
@@ -159,12 +172,21 @@ public class GameManager : MonoBehaviour
         gameOverUI.active = true;
         pauseButtonUI.active = false;
         highScoreAnnounceText.enabled = false;
-        float highScore = GetHighScore();
+        float highScore = 0;
+        try
+        {
+            highScore = GetHighScore();
+        }
+        catch { }
         if (score.value > highScore)
         {
-            highScore = score.value;
-            SetHighscore(highScore);
-            highScoreAnnounceText.enabled = true;
+            try
+            {
+                highScore = score.value;
+                SetHighscore(highScore);
+                highScoreAnnounceText.enabled = true;
+            }
+            catch { }
         }
         highScoreText.text = "HighScore: " + highScore.ToString("0000");
         finalScoreText.text = "Final Score: " + score.value.ToString("0000");
