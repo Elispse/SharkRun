@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd17763a258bba144bc1edad415ddba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Step: -0.5
+  Step: -0.3
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
 --- !u!114 &6711963614493333220
 MonoBehaviour:
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weight: 1
+  Area: 0
 --- !u!114 &972998499876189268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,3 +200,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6684fad111fc384dad0eb5c6f24a88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: {fileID: 0}
+  scoreMult: {fileID: 0}

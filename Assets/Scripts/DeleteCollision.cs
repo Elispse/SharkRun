@@ -10,7 +10,7 @@ public class DeleteCollision : MonoBehaviour
     {
         if (gameObject.CompareTag("Obstacle") && collision.tag != "Player")
         {
-            speed.value += (scoreMult.value / 8) * (Time.deltaTime / 16);
+            speed.value += scoreMult.value * Time.deltaTime;
             Destroy(gameObject);
             return;
         }

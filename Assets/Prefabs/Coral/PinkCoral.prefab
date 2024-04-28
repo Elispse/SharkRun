@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Step: -1
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
+  speedClamp: {fileID: 11400000, guid: 7c143affdd0f5a94fbc16e3bc7c21f95, type: 2}
 --- !u!114 &6802521750851325172
 MonoBehaviour:
   m_ObjectHideFlags: 0

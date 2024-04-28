@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd17763a258bba144bc1edad415ddba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Step: -0.5
+  Step: -0.3
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
 --- !u!114 &1676153612700146091
 MonoBehaviour:
@@ -186,3 +186,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weight: 1
+  Area: 0
