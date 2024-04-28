@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
 
     public void OnScoreUp(float points)
     {
-        score.value += points;
+        score.value = (score.value + points) < 0 ? 0 : score.value;
         scoreText.text = "Score: " + score.value.ToString("0000");
     }
 

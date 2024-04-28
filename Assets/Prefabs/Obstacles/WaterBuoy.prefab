@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.55, y: 4.81, z: 0}
-  m_LocalScale: {x: 2.3684344, y: 2.3684344, z: 2.3684344}
+  m_LocalScale: {x: 2.3684344, y: 2.3684344, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -202,3 +202,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstacleHitEvent: {fileID: 11400000, guid: bd68cf87711ca9249ab310130722fcae, type: 2}
+  ScoreAdd: {fileID: 11400000, guid: 89e9d807e58bb2c4694b843eced994d5, type: 2}
