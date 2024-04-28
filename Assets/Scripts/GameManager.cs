@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] FloatVariable highScore;
     [SerializeField] FloatVariable speed;
     [SerializeField] FloatVariable scoreMult;
+    [SerializeField] AudioManager audioManager;
 
     private State state = State.TITLE;
     private bool pause = false;
@@ -62,6 +63,8 @@ public class GameManager : MonoBehaviour
                 score.value = 0;
                 speed.value = speed.initialValue;
                 scoreMult.value = scoreMult.initialValue;
+                audioManager.Play("Start");
+                audioManager.Play("Background2");
                 state = State.PLAY_GAME;
                 break;
             case State.PLAY_GAME:
@@ -82,7 +85,15 @@ public class GameManager : MonoBehaviour
 
     public void OnScoreUp(float points)
     {
-        score.value = (score.value + points) < 0 ? 0 : score.value + points;
+        if (score.value + points < 0)
+        {
+            score.value = 0;
+        }
+        else
+        {
+            score.value += points;
+            audioManager.Play("Chomp");
+        }
         scoreText.text = "Score: " + score.value.ToString("0000");
     }
 
@@ -109,6 +120,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(string deathMessage)
     {
+        audioManager.Play("GameOver");
         gameOverUI.enabled = true;
         pauseButtonUI.enabled = false;
         highScoreAnnounceText.enabled = false;
@@ -119,6 +131,10 @@ public class GameManager : MonoBehaviour
             highScoreAnnounceText.enabled = true;
         }
         finalScoreText.text = "Final Score: " + score.value.ToString("0000");
+        if (deathMessage == "You died by the KILLER Orca")
+        {
+            audioManager.Play("Orca");
+        }
         diedByText.text = deathMessage;
         Time.timeScale = 0;
     }
