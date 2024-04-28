@@ -20,13 +20,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text diedByText;
 
     [SerializeField] FloatVariable score;
-    [SerializeField] FloatVariable highScore;
     [SerializeField] FloatVariable speed;
     [SerializeField] FloatVariable scoreMult;
 
     private State state = State.TITLE;
     private bool pause = false;
-    string path = "Assets/Externals/Quotes.txt";
+    string QuotePath = "Assets/Externals/Quotes.txt";
+    string HSPath = "Assets/Externals/Highscore.txt";
 
     public enum State
     {
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
 
     private string[] GetQuotes()
     {
-        string[] quotes = File.ReadAllLines(path);
+        string[] quotes = File.ReadAllLines(QuotePath);
         return quotes;
     }
     private void DisplayRandomQuote()
@@ -93,6 +93,24 @@ public class GameManager : MonoBehaviour
         string[] quotes = GetQuotes();
         int randIndex = UnityEngine.Random.Range(0, quotes.Length);
         MobyDickQuote.text = quotes[randIndex];
+    }
+
+    private float GetHighScore()
+    {
+        string highscore = File.ReadAllText(HSPath);
+        float score = 0f;
+        try
+        {
+            score = float.Parse(highscore);
+            return score;
+        } catch {}
+        
+        return score;
+    }
+
+    private void SetHighscore(float Highscore)
+    {
+        File.WriteAllText(HSPath, Highscore.ToString());
     }
 
     public void OnScoreUp(float points)
@@ -127,12 +145,14 @@ public class GameManager : MonoBehaviour
         gameOverUI.enabled = true;
         pauseButtonUI.enabled = false;
         highScoreAnnounceText.enabled = false;
+        float highScore = GetHighScore();
         if (score.value > highScore)
         {
-            highScore.value = score.value;
-            highScoreText.text = "HighScore: " + highScore.value.ToString("0000");
+            highScore = score.value;
+            SetHighscore(highScore);
             highScoreAnnounceText.enabled = true;
         }
+        highScoreText.text = "HighScore: " + highScore.ToString("0000");
         finalScoreText.text = "Final Score: " + score.value.ToString("0000");
         diedByText.text = deathMessage;
         DisplayRandomQuote();
