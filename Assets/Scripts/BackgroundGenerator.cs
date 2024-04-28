@@ -3,7 +3,6 @@ using System.IO;
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
-using UnityEditor.VersionControl;
 
 public class CoralGenerator : MonoBehaviour
 {
