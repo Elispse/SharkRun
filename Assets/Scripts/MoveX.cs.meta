@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
+  - BackgroundSpeed: {fileID: 11400000, guid: 7c143affdd0f5a94fbc16e3bc7c21f95, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
