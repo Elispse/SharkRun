@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadSecondsMinimum: 1
   LoadSecondsMaximum: 4
-  path: Assets/Prefabs/Coral
+  path: Prefabs/Coral
 --- !u!1 &355035612
 GameObject:
   m_ObjectHideFlags: 0
@@ -20242,7 +20242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadSecondsMinimum: 1
   LoadSecondsMaximum: 3
-  path: Assets/Prefabs/Seaweed
+  path: Prefabs/Seaweed
 --- !u!1 &1837460366
 GameObject:
   m_ObjectHideFlags: 0

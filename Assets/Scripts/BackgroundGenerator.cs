@@ -7,13 +7,12 @@ public class CoralGenerator : MonoBehaviour
 {
     [SerializeField] int LoadSecondsMinimum = 0;
     [SerializeField] int LoadSecondsMaximum = 5;
-    [SerializeField] string path = "Assets/Prefabs/Coral";
+    [SerializeField] GameObject[] Obstacles;
 
     private int weightLost = 0;
     private GameObject lastAsset;
 
     private int TotalWeight = 0;
-    private List<GameObject> Obstacles = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +25,10 @@ public class CoralGenerator : MonoBehaviour
 
     private void GetAllPrefabs()
     {
-        string[] prefabFiles = Directory.GetFiles(path, "*.prefab");
-        foreach (var file in prefabFiles)
+        foreach (var obj in Obstacles)
         {
-            GameObject asset = Resources.Load<GameObject>(file);
-            WeightScript wScript = asset.GetComponent<WeightScript>();
+            WeightScript wScript = obj.GetComponent<WeightScript>();
             TotalWeight += wScript.Weight;
-            Obstacles.Add(asset);
         }
     }
 
@@ -59,7 +55,7 @@ public class CoralGenerator : MonoBehaviour
             yield break;
         }
 
-        GameObject newObstacle = Instantiate(obj);
+        GameObject newObstacle = (GameObject) Instantiate(obj);
 
         if (lastAsset != null)
         {
