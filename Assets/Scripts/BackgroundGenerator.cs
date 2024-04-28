@@ -21,7 +21,7 @@ public class CoralGenerator : MonoBehaviour
     void Start()
     {
         GetAllPrefabs();
-        Debug.Log("Coral Gen Loaded");
+        Debug.Log("Background Gen Loaded");
 
         StartCoroutine(GenerateRandomObject(1));
     }
