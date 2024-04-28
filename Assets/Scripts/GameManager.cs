@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text finalScoreText;
     [SerializeField] TMP_Text highScoreText;
     [SerializeField] TMP_Text highScoreAnnounceText;
+    [SerializeField] TMP_Text diedByText;
 
     [SerializeField] FloatVariable score;
     [SerializeField] FloatVariable highScore;
@@ -118,6 +119,7 @@ public class GameManager : MonoBehaviour
             highScoreAnnounceText.enabled = true;
         }
         finalScoreText.text = "Final Score: " + score.value.ToString("0000");
+        diedByText.text = deathMessage;
         Time.timeScale = 0;
     }
 
