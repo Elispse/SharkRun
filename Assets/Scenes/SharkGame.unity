@@ -884,7 +884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Background
-    clip: {fileID: 8300000, guid: 06c2c15e9dd19414682cdd5b65b13f79, type: 3}
+    clip: {fileID: 8300000, guid: c520ffc10aac9e64f8a650a9e748b166, type: 3}
     volume: 0.6
     pitch: 1
     loop: 1
@@ -918,12 +918,6 @@ MonoBehaviour:
     volume: 0.4
     pitch: 1
     loop: 0
-    source: {fileID: 0}
-  - name: Background2
-    clip: {fileID: 8300000, guid: c520ffc10aac9e64f8a650a9e748b166, type: 3}
-    volume: 0.6
-    pitch: 1
-    loop: 1
     source: {fileID: 0}
 --- !u!4 &269955968
 Transform:

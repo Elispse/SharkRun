@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
                 speed.value = speed.initialValue;
                 scoreMult.value = scoreMult.initialValue;
                 audioManager.Play("Start");
-                audioManager.Play("Background2");
+                audioManager.Play("Background");
                 state = State.PLAY_GAME;
                 break;
             case State.PLAY_GAME:
