@@ -12,29 +12,18 @@ public class ObstacleGenerator : MonoBehaviour
 
     [SerializeField] int chanceNotInArea = 2; // 1 in 10 chance.
 
+    [SerializeField] GameObject[] Obstacles;
+
     private int weightLost = 0;
     private GameObject lastAsset;
 
-    private string path = "Assets/Prefabs/Obstacles";
-    private List<GameObject> Obstacles = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        GetAllPrefabs();
         Debug.Log("Obstacle Gen Loaded");
 
         StartCoroutine(GenerateRandomObject(1));
-    }
-
-    private void GetAllPrefabs()
-    {
-        string[] prefabFiles = Directory.GetFiles(path, "*.prefab");
-        foreach (var file in prefabFiles)
-        {
-            GameObject asset = Resources.Load<GameObject>(file);
-            Obstacles.Add(asset);
-        }
     }
 
     private GameObject GetObjectFromListByWeight(List<GameObject> values, int weight)
