@@ -8,14 +8,14 @@ public class DeleteCollision : MonoBehaviour
     [SerializeField] FloatVariable scoreMult;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Finish"))
+        if (gameObject.CompareTag("Obstacle") && collision.tag != "Player")
         {
+            speed.value += (scoreMult.value / 8) * (Time.deltaTime / 16);
             Destroy(gameObject);
             return;
         }
-        if (collision.gameObject.CompareTag("Obstacle"))
+        else if (collision.gameObject.CompareTag("Finish"))
         {
-            speed.value += (scoreMult / 10) * (Time.deltaTime / 16);
             Destroy(gameObject);
             return;
         }

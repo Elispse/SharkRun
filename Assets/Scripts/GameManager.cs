@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
                 break;
             case State.PLAY_GAME:
                 score.value += scoreMult.value * Time.deltaTime;
+                scoreMult.value += speed.value * (Time.deltaTime / 16);
                 scoreText.text = "Score: " + score.value.ToString("0000");
                 if (Input.GetKeyDown(KeyCode.Escape) && pause == false)
                 {
