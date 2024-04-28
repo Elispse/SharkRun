@@ -4,7 +4,6 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using System.Linq;
-using static UnityEngine.Rendering.DebugUI;
 
 public class ObstacleGenerator : MonoBehaviour
 {

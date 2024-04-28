@@ -9,12 +9,12 @@ public class CoralGenerator : MonoBehaviour
 {
     [SerializeField] int LoadSecondsMinimum = 0;
     [SerializeField] int LoadSecondsMaximum = 5;
+    [SerializeField] string path = "Assets/Prefabs/Coral";
 
     private int weightLost = 0;
     private GameObject lastAsset;
 
     private int TotalWeight = 0;
-    private string path = "Assets/Prefabs/Coral";
     private List<GameObject> Obstacles = new List<GameObject>();
 
     // Start is called before the first frame update
