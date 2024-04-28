@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text finalScoreText;
     [SerializeField] TMP_Text highScoreText;
     [SerializeField] TMP_Text highScoreAnnounceText;
-    [SerializeField] TextMeshPro MobyDickQuote;
+    [SerializeField] TMP_Text MobyDickQuote;
     [SerializeField] TMP_Text diedByText;
 
     [SerializeField] FloatVariable score;

@@ -346,8 +346,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -791,6 +791,7 @@ MonoBehaviour:
   finalScoreText: {fileID: 1307553844}
   highScoreText: {fileID: 394146330}
   highScoreAnnounceText: {fileID: 823611749}
+  MobyDickQuote: {fileID: 150020129}
   diedByText: {fileID: 1314713484}
   score: {fileID: 11400000, guid: 5b6660e2d7b9a8645bb12558ed4412dc, type: 2}
   highScore: {fileID: 11400000, guid: e8911084989bfe84580cfd2ba9a67d3b, type: 2}
