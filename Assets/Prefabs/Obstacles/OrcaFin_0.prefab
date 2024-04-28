@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5872794278682596679}
   - component: {fileID: 2521476842285877472}
   - component: {fileID: 8564709038187884111}
-  - component: {fileID: 4847783147122756694}
   - component: {fileID: 6465470465086262287}
   - component: {fileID: 2072894185382501301}
+  - component: {fileID: 3748955497389151702}
   m_Layer: 0
   m_Name: OrcaFin_0
   m_TagString: Untagged
@@ -154,20 +154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
   scoreMult: {fileID: 11400000, guid: fda3339bf98dde3498dec20815d2b2bc, type: 2}
---- !u!114 &4847783147122756694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8401309064963841219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b98960cf526be347abc000213d4db86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObstacleHitEvent: {fileID: 11400000, guid: bd68cf87711ca9249ab310130722fcae, type: 2}
-  ScoreAdd: {fileID: 11400000, guid: 89e9d807e58bb2c4694b843eced994d5, type: 2}
 --- !u!68 &6465470465086262287
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -262,3 +248,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.026402986, y: -0.052799545}
   m_Size: {x: 2.507208, y: 1.1740216}
   m_Direction: 1
+--- !u!114 &3748955497389151702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8401309064963841219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84a18322ae56714bb495b71f76308fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 11400000, guid: d9272f807cf10164785893fee647b5d8, type: 2}
+  deathMessage: You died by the KILLER Orca
