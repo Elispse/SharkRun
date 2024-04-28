@@ -8,10 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Canvas titleUI;
-    [SerializeField] Canvas gameOverUI;
-    [SerializeField] Canvas pauseUI;
-    [SerializeField] Canvas pauseButtonUI;
+    [SerializeField] GameObject titleUI;
+    [SerializeField] GameObject gameOverUI;
+    [SerializeField] GameObject pauseUI;
+    [SerializeField] GameObject pauseButtonUI;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] TMP_Text finalScoreText;
     [SerializeField] TMP_Text highScoreText;
@@ -42,10 +42,10 @@ public class GameManager : MonoBehaviour
         speed.value = speed.initialValue;
         scoreMult.value = scoreMult.initialValue;
         Time.timeScale = 0;
-        titleUI.enabled = true;
-        pauseUI.enabled = false;
-        pauseButtonUI.enabled = false;
-        gameOverUI.enabled = false;
+        titleUI.active = true;
+        pauseUI.active = false;
+        pauseButtonUI.active = false;
+        gameOverUI.active = false;
     }
 
     // Update is called once per frame
@@ -56,13 +56,13 @@ public class GameManager : MonoBehaviour
             case State.TITLE:
                 if (Input.anyKey)
                 {
-                    titleUI.enabled = false;
+                    titleUI.active = false;
                     Time.timeScale = 1;
                     state = State.SET_GAME;
                 }
                 break;
             case State.SET_GAME:
-                pauseButtonUI.enabled = true;
+                pauseButtonUI.active = true;
                 score.value = 0;
                 speed.value = speed.initialValue;
                 scoreMult.value = scoreMult.initialValue;
@@ -135,16 +135,16 @@ public class GameManager : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0;
-        pauseUI.enabled = true;
-        pauseButtonUI.enabled = false;
+        pauseUI.active = true;
+        pauseButtonUI.active = false;
         pause = true;
     }
 
     public void UnPause()
     {
         Time.timeScale = 1;
-        pauseUI.enabled = false;
-        pauseButtonUI.enabled = true;
+        pauseUI.active = false;
+        pauseButtonUI.active = true;
         pause = false;
     }
 
@@ -156,8 +156,8 @@ public class GameManager : MonoBehaviour
     public void GameOver(string deathMessage)
     {
         audioManager.Play("GameOver");
-        gameOverUI.enabled = true;
-        pauseButtonUI.enabled = false;
+        gameOverUI.active = true;
+        pauseButtonUI.active = false;
         highScoreAnnounceText.enabled = false;
         float highScore = GetHighScore();
         if (score.value > highScore)
