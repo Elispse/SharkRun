@@ -1120,7 +1120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadSecondsMinimum: 1
   LoadSecondsMaximum: 4
-  path: Prefabs/Coral
+  Obstacles:
+  - {fileID: 4352328897234883409, guid: b628bbee97092c4428087d9a8bb712c0, type: 3}
+  - {fileID: 3979202529788754166, guid: 8038e8049726592448e6c3e5e9661e23, type: 3}
+  - {fileID: 8578463133031645326, guid: 15469ffe81f89e14d8da1bd59b47044b, type: 3}
 --- !u!1 &355035612
 GameObject:
   m_ObjectHideFlags: 0
@@ -19335,6 +19338,23 @@ MonoBehaviour:
   LoadSecondsMaximum: 7
   Player: {fileID: 194603547}
   chanceNotInArea: 10
+  Obstacles:
+  - {fileID: 5777078663527604665, guid: db35b8d3d8cffe7498ca73a7fc96ee58, type: 3}
+  - {fileID: 4836883463402887663, guid: 819ad0f70c0328743a1c52202d2c48dd, type: 3}
+  - {fileID: 2614151763167167190, guid: ffe1651523c8b684e8c438bfc34dd58a, type: 3}
+  - {fileID: 6631153651355825653, guid: 5b64556af8ed31944aa20cce30ed0f17, type: 3}
+  - {fileID: 6354358004504928790, guid: 6f038a8f8c56734468ffdaebf9655326, type: 3}
+  - {fileID: 372852674535326698, guid: 1d2019dc180504346a8729014199e3b7, type: 3}
+  - {fileID: 8558104428197985610, guid: 79fe88c069503b64d8c09193e2121d41, type: 3}
+  - {fileID: 2963283899586499686, guid: cb0a2651d0593dc49897727e8099c03b, type: 3}
+  - {fileID: 5399246262280881802, guid: 71ab99aab80921646b8e0b5891dd8448, type: 3}
+  - {fileID: 5596127386672516604, guid: 2858c64d53aa3904da45448664a40e4b, type: 3}
+  - {fileID: 8760271011058672226, guid: 5f435524535d7cc45b723db2dad9b4cf, type: 3}
+  - {fileID: 8401309064963841219, guid: 8bef0676a3083bd4fa16b14887a41d74, type: 3}
+  - {fileID: 1653963600492168721, guid: 837fdb3c94eed9f40b8d76ccb80ac2d2, type: 3}
+  - {fileID: 3492756979335377425, guid: ef7ac41cb49545a46851819f521bc932, type: 3}
+  - {fileID: 5728990321802121523, guid: 0bf8d43ce4af5d04686067d0e1ef50ed, type: 3}
+  - {fileID: 4755434703515622371, guid: 383812d37f9092f4d9e320309a49c6a9, type: 3}
 --- !u!4 &1250300154
 Transform:
   m_ObjectHideFlags: 0
@@ -20242,7 +20262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadSecondsMinimum: 1
   LoadSecondsMaximum: 3
-  path: Prefabs/Seaweed
+  Obstacles:
+  - {fileID: 6378352008541622879, guid: 5cd254e3db28b4546bd701f359c53ab0, type: 3}
 --- !u!1 &1837460366
 GameObject:
   m_ObjectHideFlags: 0
