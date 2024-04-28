@@ -118,6 +118,8 @@ public class GameManager : MonoBehaviour
 
     public void OnScoreUp(float points)
     {
+        if (points < 0)
+            audioManager.Play("Hit");
         if (score.value + points < 0)
         {
             score.value = 0;

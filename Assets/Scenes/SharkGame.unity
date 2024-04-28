@@ -794,7 +794,6 @@ MonoBehaviour:
   MobyDickQuote: {fileID: 150020129}
   diedByText: {fileID: 1314713484}
   score: {fileID: 11400000, guid: 5b6660e2d7b9a8645bb12558ed4412dc, type: 2}
-  highScore: {fileID: 11400000, guid: e8911084989bfe84580cfd2ba9a67d3b, type: 2}
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
   scoreMult: {fileID: 11400000, guid: fda3339bf98dde3498dec20815d2b2bc, type: 2}
   audioManager: {fileID: 269955967}
@@ -918,6 +917,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 46dece37c247531428680073f5d259e6, type: 3}
     volume: 0.4
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 46dece37c247531428680073f5d259e6, type: 3}
+    volume: 0.4
+    pitch: 1.5
     loop: 0
     source: {fileID: 0}
 --- !u!4 &269955968
