@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
 public class CoralGenerator : MonoBehaviour
@@ -30,7 +29,7 @@ public class CoralGenerator : MonoBehaviour
         string[] prefabFiles = Directory.GetFiles(path, "*.prefab");
         foreach (var file in prefabFiles)
         {
-            GameObject asset = (GameObject) AssetDatabase.LoadAssetAtPath(file, typeof(GameObject));
+            GameObject asset = Resources.Load<GameObject>(file);
             WeightScript wScript = asset.GetComponent<WeightScript>();
             TotalWeight += wScript.Weight;
             Obstacles.Add(asset);

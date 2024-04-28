@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using System.Linq;
 
@@ -33,7 +32,7 @@ public class ObstacleGenerator : MonoBehaviour
         string[] prefabFiles = Directory.GetFiles(path, "*.prefab");
         foreach (var file in prefabFiles)
         {
-            GameObject asset = (GameObject) AssetDatabase.LoadAssetAtPath(file, typeof(GameObject));
+            GameObject asset = Resources.Load<GameObject>(file);
             Obstacles.Add(asset);
         }
     }
