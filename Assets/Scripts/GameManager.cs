@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text finalScoreText;
     [SerializeField] TMP_Text highScoreText;
     [SerializeField] TMP_Text highScoreAnnounceText;
+    [SerializeField] TextMeshPro MobyDickQuote;
     [SerializeField] TMP_Text diedByText;
 
     [SerializeField] FloatVariable score;
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     private State state = State.TITLE;
     private bool pause = false;
+    string path = "Assets/Externals/Quotes.txt";
 
     public enum State
     {
@@ -80,6 +83,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private string[] GetQuotes()
+    {
+        string[] quotes = File.ReadAllLines(path);
+        return quotes;
+    }
+    private void DisplayRandomQuote()
+    {
+        string[] quotes = GetQuotes();
+        int randIndex = UnityEngine.Random.Range(0, quotes.Length);
+        MobyDickQuote.text = quotes[randIndex];
+    }
+
     public void OnScoreUp(float points)
     {
         score.value = (score.value + points) < 0 ? 0 : score.value + points;
@@ -120,8 +135,10 @@ public class GameManager : MonoBehaviour
         }
         finalScoreText.text = "Final Score: " + score.value.ToString("0000");
         diedByText.text = deathMessage;
+        DisplayRandomQuote();
         Time.timeScale = 0;
     }
+
 
     public void Quit()
     {
