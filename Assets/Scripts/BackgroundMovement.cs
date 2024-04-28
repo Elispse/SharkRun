@@ -12,6 +12,6 @@ public class BackgroundMovement : MonoBehaviour
 
     void Update()
     {
-        _img.uvRect = new Rect(_img.uvRect.position + new Vector2((_x + speed.value) * Time.deltaTime, _y), _img.uvRect.size);
+        _img.uvRect = new Rect(_img.uvRect.position + new Vector2((_x + (speed.value/(_img.transform.localScale.x*3))) * Time.deltaTime, _y), _img.uvRect.size);
     }
 }
