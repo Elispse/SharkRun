@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,10 +34,10 @@ public class GameManager : MonoBehaviour
         speed.value = speed.initialValue;
         scoreMult.value = scoreMult.initialValue;
         Time.timeScale = 0;
+        titleUI.enabled = true;
         pauseUI.enabled = false;
         pauseButtonUI.enabled = false;
         gameOverUI.enabled = false;
-        titleUI.enabled = true;
     }
 
     // Update is called once per frame
@@ -47,9 +48,9 @@ public class GameManager : MonoBehaviour
             case State.TITLE:
                 if (Input.anyKey)
                 {
-                    state = State.SET_GAME;
                     titleUI.enabled = false;
                     Time.timeScale = 1;
+                    state = State.SET_GAME;
                 }
                 break;
             case State.SET_GAME:
@@ -97,6 +98,11 @@ public class GameManager : MonoBehaviour
         pauseUI.enabled = false;
         pauseButtonUI.enabled = true;
         pause = false;
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
     public void GameOver()
