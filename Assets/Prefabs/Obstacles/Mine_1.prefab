@@ -531,6 +531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueTangFishFin_0
       objectReference: {fileID: 0}
+    - target: {fileID: 4695576943795966576, guid: f35c4aea059773349b06165611e3d1b6, type: 3}
+      propertyPath: addedScore
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5343449097913253572, guid: f35c4aea059773349b06165611e3d1b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.57977736
