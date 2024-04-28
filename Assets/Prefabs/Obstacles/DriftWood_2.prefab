@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4379765058629962513
+--- !u!1 &8558104428197985610
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,14 +8,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8003474748714445557}
-  - component: {fileID: 5274464689583535492}
-  - component: {fileID: 7347022727796898103}
-  - component: {fileID: 8911914818425961003}
-  - component: {fileID: 1701968828232097764}
-  - component: {fileID: 5902164781384158061}
-  - component: {fileID: 7176938285000165424}
-  - component: {fileID: 5239388788624348160}
+  - component: {fileID: 7959530536489383847}
+  - component: {fileID: 3149906895063762416}
+  - component: {fileID: 1339392586331211855}
+  - component: {fileID: 7315502978252657078}
+  - component: {fileID: 3849245693063471170}
+  - component: {fileID: 474793870295444871}
+  - component: {fileID: 242819842863913285}
+  - component: {fileID: 9080361666361488513}
   m_Layer: 0
   m_Name: DriftWood_2
   m_TagString: Untagged
@@ -23,28 +23,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8003474748714445557
+--- !u!4 &7959530536489383847
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379765058629962513}
+  m_GameObject: {fileID: 8558104428197985610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.83, y: 4.58, z: 0}
+  m_LocalPosition: {x: 15.191642, y: 4.4729095, z: 0}
   m_LocalScale: {x: 2.3081, y: 2.3081, z: 2.3081}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5274464689583535492
+--- !u!212 &3149906895063762416
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379765058629962513}
+  m_GameObject: {fileID: 8558104428197985610}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -90,14 +90,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7347022727796898103
+--- !u!95 &1339392586331211855
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379765058629962513}
+  m_GameObject: {fileID: 8558104428197985610}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cf2e2d64e64d84645b98c532b1196752, type: 2}
@@ -111,13 +111,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8911914818425961003
+--- !u!114 &7315502978252657078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379765058629962513}
+  m_GameObject: {fileID: 8558104428197985610}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a645143d94104d49bc6eb0263bd0ab6, type: 3}
@@ -125,13 +125,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weight: 1
   Area: 1
---- !u!114 &1701968828232097764
+--- !u!114 &3849245693063471170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379765058629962513}
+  m_GameObject: {fileID: 8558104428197985610}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd17763a258bba144bc1edad415ddba9, type: 3}
@@ -139,13 +139,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Step: -2
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
---- !u!114 &5902164781384158061
+--- !u!114 &474793870295444871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379765058629962513}
+  m_GameObject: {fileID: 8558104428197985610}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6684fad111fc384dad0eb5c6f24a88d, type: 3}
@@ -153,13 +153,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
   scoreMult: {fileID: 11400000, guid: fda3339bf98dde3498dec20815d2b2bc, type: 2}
---- !u!114 &7176938285000165424
+--- !u!114 &242819842863913285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379765058629962513}
+  m_GameObject: {fileID: 8558104428197985610}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b98960cf526be347abc000213d4db86, type: 3}
@@ -167,13 +167,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstacleHitEvent: {fileID: 11400000, guid: bd68cf87711ca9249ab310130722fcae, type: 2}
   ScoreAdd: {fileID: 11400000, guid: 89e9d807e58bb2c4694b843eced994d5, type: 2}
---- !u!68 &5239388788624348160
+--- !u!68 &9080361666361488513
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379765058629962513}
+  m_GameObject: {fileID: 8558104428197985610}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
