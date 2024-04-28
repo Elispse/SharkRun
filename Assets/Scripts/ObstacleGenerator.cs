@@ -24,7 +24,7 @@ public class ObstacleGenerator : MonoBehaviour
     void Start()
     {
         GetAllPrefabs();
-        Debug.Log("Script Loaded");
+        Debug.Log("Obstacle Gen Loaded");
 
         StartCoroutine(GenerateRandomObject(1));
     }

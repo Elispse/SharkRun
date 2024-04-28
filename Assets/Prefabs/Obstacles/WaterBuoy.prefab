@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5494312083712229081}
   - component: {fileID: 2562161617263969530}
   - component: {fileID: 1159825103721915347}
+  - component: {fileID: -1260002013676182303}
   m_Layer: 0
   m_Name: WaterBuoy
   m_TagString: Obstacle
@@ -187,3 +188,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
   scoreMult: {fileID: 11400000, guid: fda3339bf98dde3498dec20815d2b2bc, type: 2}
+--- !u!114 &-1260002013676182303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4755434703515622371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b98960cf526be347abc000213d4db86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObstacleHitEvent: {fileID: 11400000, guid: bd68cf87711ca9249ab310130722fcae, type: 2}
