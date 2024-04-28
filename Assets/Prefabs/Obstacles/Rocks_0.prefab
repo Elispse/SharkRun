@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2252570151139087529}
   - component: {fileID: 6272816688888286600}
   - component: {fileID: 5702384855415388795}
+  - component: {fileID: 3600751883682867998}
   m_Layer: 0
   m_Name: Rocks_0
   m_TagString: Obstacle
@@ -192,3 +193,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
   scoreMult: {fileID: 11400000, guid: fda3339bf98dde3498dec20815d2b2bc, type: 2}
+--- !u!114 &3600751883682867998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653963600492168721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b98960cf526be347abc000213d4db86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObstacleHitEvent: {fileID: 11400000, guid: bd68cf87711ca9249ab310130722fcae, type: 2}
