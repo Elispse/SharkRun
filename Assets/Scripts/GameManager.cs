@@ -12,8 +12,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] Canvas pauseUI;
     [SerializeField] Canvas pauseButtonUI;
     [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text finalScoreText;
+    [SerializeField] TMP_Text highScoreText;
+    [SerializeField] TMP_Text highScoreAnnounceText;
+    [SerializeField] TMP_Text diedByText;
 
     [SerializeField] FloatVariable score;
+    [SerializeField] FloatVariable highScore;
     [SerializeField] FloatVariable speed;
     [SerializeField] FloatVariable scoreMult;
 
@@ -25,7 +30,6 @@ public class GameManager : MonoBehaviour
         TITLE,
         SET_GAME,
         PLAY_GAME,
-        GAME_OVER
     }
 
     // Start is called before the first frame update
@@ -73,9 +77,6 @@ public class GameManager : MonoBehaviour
                     UnPause();
                 }
                 break;
-            case State.GAME_OVER:
-
-                break;
         }
     }
 
@@ -106,9 +107,20 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
-    public void GameOver()
+    public void GameOver(string deathMessage)
     {
         gameOverUI.enabled = true;
+        pauseButtonUI.enabled = false;
+        highScoreAnnounceText.enabled = false;
+        if (score.value > highScore)
+        {
+            highScore.value = score.value;
+            highScoreText.text = "HighScore: " + highScore.value.ToString("0000");
+            highScoreAnnounceText.enabled = true;
+        }
+        finalScoreText.text = "Final Score: " + score.value.ToString("0000");
+        diedByText.text = deathMessage;
+        Time.timeScale = 0;
     }
 
     public void Quit()

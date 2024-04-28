@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Step: -2
   speed: {fileID: 11400000, guid: 699b67b351995ca44a25d4616ba2dbfd, type: 2}
+  BackgroundSpeed: {fileID: 0}
 --- !u!114 &3594909075724190513
 MonoBehaviour:
   m_ObjectHideFlags: 0
